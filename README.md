@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Car Logo Detector (BMW, Mercedes-Benz, Tesla, Toyota)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web React que usa **Google Teachable Machine** y **TensorFlow.js** para identificar la marca de un automóvil a partir del logotipo visible en cámara o en una imagen cargada. El modelo reconoce BMW, Mercedes-Benz, Tesla y Toyota, y muestra la confianza de la predicción en tiempo real.
 
-## Available Scripts
+## Demo rápida (cómo funciona)
+1. Abre la app y permite acceso a la cámara o sube una imagen.
+2. La IA analiza el cuadro y muestra la marca detectada con su porcentaje de confianza.
+3. Puedes repetir las capturas o probar con distintos logos desde archivo.
 
-In the project directory, you can run:
+## Tecnologías principales
+- React 19 + React Scripts 5
+- TensorFlow.js + @teachablemachine/image
+- React Webcam para captura en vivo
+- CSS3 para el tema oscuro y diseño responsive
 
-### `npm start`
+## Modelo
+- Fuente: Teachable Machine  
+- URL del modelo: `https://teachablemachine.withgoogle.com/models/s9H-0dM8W/`
+- Datos de entrenamiento: 387 imágenes de 4 clases (BMW, Mercedes-Benz, Toyota, Tesla)
+- Hiperparámetros documentados en la UI:
+  - Épocas: 100
+  - Batch size: 32
+  - Learning rate: 0.001
+  - Accuracy final: ~92.5%
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionalidades
+- 📷 Detección en tiempo real con la webcam.
+- 📁 Subida de imágenes desde archivo.
+- 📊 Confianza por clase en una tabla clara.
+- 🎨 Interfaz cuidada con cards y métricas del modelo.
+- 📱 Diseño responsive.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requisitos
+- Node.js 18+ y npm
 
-### `npm test`
+## Instalación y ejecución
+```bash
+npm install
+npm start
+```
+La app se abre en `http://localhost:3000`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para build de producción:
+```bash
+npm run build
+```
 
-### `npm run build`
+## Estructura relevante
+- `src/App.js` — flujo principal, cards de captura y resultados.
+- `src/hooks/useTeachableMachine.js` — carga del modelo y función `predict`.
+- `src/components/*` — Header, WebcamCapture, PredictionResults.
+- `src/images` — íconos utilizados en la UI.
+- `public/` — assets públicos y `index.html`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Uso en producción / hosting
+1. Ejecuta `npm run build` para generar `build/`.
+2. Sirve el directorio `build` en tu hosting estático preferido (Netlify, Vercel, GitHub Pages, etc.).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Créditos
+- Juan Esteban Nocua Camacho — Laboratorio de IA, Ingeniería de Sistemas y Computación.
+- Modelo entrenado con Google Teachable Machine; inferencia en navegador con TensorFlow.js.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
