@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CarLogoDetector-GoogleTeachableMachine-LAB/static/css/main.2661a1d8.css",
+    "main.js": "/CarLogoDetector-GoogleTeachableMachine-LAB/static/js/main.3443082d.js",
+    "static/media/ai-assistant.png": "/CarLogoDetector-GoogleTeachableMachine-LAB/static/media/ai-assistant.807ead6753cc178d4cab.png",
+    "static/media/camera.png": "/CarLogoDetector-GoogleTeachableMachine-LAB/static/media/camera.fde417bb48ffd89f262d.png",
+    "index.html": "/CarLogoDetector-GoogleTeachableMachine-LAB/index.html",
+    "main.2661a1d8.css.map": "/CarLogoDetector-GoogleTeachableMachine-LAB/static/css/main.2661a1d8.css.map",
+    "main.3443082d.js.map": "/CarLogoDetector-GoogleTeachableMachine-LAB/static/js/main.3443082d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2661a1d8.css",
+    "static/js/main.3443082d.js"
+  ]
+}
