@@ -139,7 +139,7 @@ function App() {
             <div className="info-grid">
               <div className="info-card">
                 <h3>¿Cómo funciona?</h3>
-                <p>1. Apunta la cámara al logotipo o sube una imagen</p>
+                <p>1. Apunta la cámara al auto o sube una imagen del auto</p>
                 <p>2. La IA analiza la imagen automáticamente</p>
                 <p>3. Se muestra la marca detectada con nivel de confianza</p>
                 <p>4. Modelo entrenado con 387 logos de 9 marcas</p>
